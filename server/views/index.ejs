@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Vanilla example </title>
+    <link rel='stylesheet' href='/css/style.css' />
+  </head>
+  <body>
+    <h1>Autonmous Car</h1>
+
+
+    <% if (!locals.fileName) { %>
+      <a href="vanilla">Vanilla</a> <br>
+      <a href="angular">Angular</a> <br>
+      <a href="react">React</a>
+    <% } %>
+
+    <div id="container"></div>
+
+
+    <% if (locals.fileName) { %>
+      <script src="/js/<%=fileName %>.js"></script>
+    <% } %>
+  </body>
+</html>
