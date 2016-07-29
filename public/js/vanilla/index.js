@@ -6,7 +6,7 @@
 // to/from mph
 function convertSpeed(speed, targetUnit) {
   // to mph
-  if (targetUnit === "mph") {
+  if (targetUnit === 'mph') {
     return speed * 0.621371; // FIXME: Possible error
   }
 
@@ -14,34 +14,34 @@ function convertSpeed(speed, targetUnit) {
 }
 
 function getChanceOfCollision() {
-  var otherCars = getNearbyVehicleCount()
+  var otherCars = getNearbyVehicleCount();
   var  speed = getCurrentSpeed();
   var closestCarSpeed = getOncomingVehicleSpeed();
   var roadCondition = getRoadCondition();
 
-  return otherCars * convertSpeed(speed, "mph") * roadCondition * closestCarSpeed / 100 * getFancyRandomNumber(0, 10000000)
+  return otherCars * convertSpeed(speed, 'mph') * roadCondition * closestCarSpeed / 100 * getFancyRandomNumber(0, 10000000);
 }
 
-  function getFancyRandomNumber(min, max) {
-    return Math.floor(Math.random() * (max - min)) + min;
-  }
+function getFancyRandomNumber(min, max) {
+  return Math.floor(Math.random() * (max - min)) + min;
+}
 
 function getCurrentSpeed() {
 
 // assumes mph
-  var min = 0
-  var max = 250
+  var min = 0;
+  var max = 250;
 
    // TODO: Hook this up to the speed service in the car
   var currentSpeed = getFancyRandomNumber(min, max);
-  console.log("currentSpeed", currentSpeed) // FIXME: Remove this
+  console.log('currentSpeed', currentSpeed); // FIXME: Remove this
   return currentSpeed;
 }
 
 function getRoadCondition() {
   // TODO: connect this to the proper service
   // return getRoadConditionFromService();
-   return "wet" || "dry" || "icy";
+  return 'wet' || 'dry' || 'icy';
 }
 
 // duration and amount?
@@ -60,17 +60,16 @@ function getRemainingGasAmount() {
 // nearby vehicles
 function getNearbyVehicleCount(vehicle){
   return vehicle.getSpeed();
-  return 5
 }
 
 // returns the speed of the closest oncoming vehicle
 function getOncomingVehicleSpeed() {
-      var min = 0
-      var max = 350; // This is a feature we promised, but we are totally guessing.
+  var min = 0;
+  var max = 350; // This is a feature we promised, but we are totally guessing.
 
   // TODO: Hook this up to the speed detection service in the car
   var currentSpeed = Math.floor(Math.random() * (max - min)) + min;
-  return currentSpeed
+  return currentSpeed;
 }
 
 
@@ -99,5 +98,5 @@ function init() {
   // document.getElementById('container').innerHTML = 'look ma the car I built in the back shed drives itself'
 }
 
-init()
+init();
 
