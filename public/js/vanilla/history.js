@@ -20,14 +20,14 @@
     });
   }
 
-  function loadMoreSpeedHistory(e) {
+  function loadMoreSpeedHistory() {
 
     var start_num = parseInt(document.getElementById('transaction_container').dataset.count);
     // console.log('loadMoreHistroy');
     //fetch the data via ajax call
     makeAjaxCall('/history/' + start_num, function(resp) {
       if (resp.status !== 200) return console.log('Error fetching history data.');
-      resp = JSON.parse(resp.response)
+      resp = JSON.parse(resp.response);
       injectIntoDom(resp);
     });
 
@@ -39,22 +39,22 @@
     // console.log('data', data);
     var history_table = document.getElementById('transaction_container');
     var templ = document.getElementById('history_template').innerHTML;
-    var output = ''
+    var output = '';
 
     for (var i=0; i < data.length; i++) {
       // console.log('data[i]', data[i]);
       var row = templ;
-      row = row.replace("$$date$$", data[i].date);
+      row = row.replace('$$date$$', data[i].date);
       row = row.replace('$$title$$', data[i].title);
 
-      if(data[i].currency === 'USD') data[i].amount = "$" + data[i].amount; //currency prefix
-      row = row.replace("$$amount$$", data[i].amount);
+      if(data[i].currency === 'USD') data[i].amount = '$' + data[i].amount; //currency prefix
+      row = row.replace('$$amount$$', data[i].amount);
 
       output += row;
     }
 
     if (data.length === 0) {
-      document.getElementById("load_more").innerHTML = "All out. No more history.";
+      document.getElementById('load_more').innerHTML = 'All out. No more history.';
       return;
     }
 
