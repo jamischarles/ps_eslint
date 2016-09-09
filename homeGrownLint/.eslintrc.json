@@ -1,0 +1,10 @@
+{
+  "rules": {
+	"no-console-evar": ["error", {"allow": ["testing"]}],
+	"wrong-params": "error",
+	"disallow-function": ["error", "alert", "debugger", "timeStart"],
+	"expire": "error",
+	"no-alert": "warn",
+	"no-fixme": "error"
+  }
+}
