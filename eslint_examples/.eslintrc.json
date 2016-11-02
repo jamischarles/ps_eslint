@@ -1,0 +1,33 @@
+{
+    "env": {
+        "node": true
+    },
+    "extends": "eslint:recommended",
+    "rules": {
+        "no-console": "off",
+        "fixable": "error",
+        "expire": "error",
+        "function-param": "error",
+        "eslint-params": ["error", "alert", "findOranges", "findApples"],
+        "no-fixme": "error",
+        "no-giraffe": "error",
+        "no-restricted-modules": ["error", "underscore"],
+        "eqeqeq": "error",
+        "indent": [
+            "error",
+            2
+        ],
+        "linebreak-style": [
+            "error",
+            "unix"
+        ],
+        "quotes": [
+            "error",
+            "single"
+        ],
+        "semi": [
+            "error",
+            "always"
+        ]
+    }
+}
