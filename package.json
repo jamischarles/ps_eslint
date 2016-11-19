@@ -18,7 +18,12 @@
   },
   "devDependencies": {
     "concurrently": "^2.0.0",
-    "eslint": "^2.13.1",
+    "eslint": "^3.9.1",
+    "eslint-config-airbnb-base": "^10.0.1",
+    "eslint-config-delta": "git+https://git@github.com/jamischarles/ps_eslint-config-delta.git",
+    "eslint-plugin-delta": "git+https://git@github.com/jamischarles/ps_eslint-plugin-delta.git",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-this": "^0.2.2",
     "mocha": "^2.5.3",
     "pre-commit": "^1.1.3"
   }
