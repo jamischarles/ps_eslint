@@ -1,6 +1,7 @@
 # `Better Code Quality with ESLint` Instructions
 
 This is the instructions page for the "Better Code Quality with ESLint " Pluralsight course demo code.
+The code files can be downloaded on the course page. 
 
 I'll try to keep the code files update when breaking changes happen to the ESLint API. Check the demo code first. 
 If there are significant API changes that will break the demo code, I'll include workaound instructions here.
