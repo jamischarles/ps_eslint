@@ -1,9 +1,0 @@
-{
-    "root": true,
-    "env": {
-        "node": true
-    },
-    "extends": ["plugin:delta/recommended"], // eslint-plugin-delta
-    "rules": {
-    }
-}
